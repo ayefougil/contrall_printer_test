@@ -14,6 +14,18 @@
       "languageVersion": "2.18"
     },
     {
+      "name": "barcode",
+      "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/barcode-2.2.8",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "bidi",
+      "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/bidi-2.0.12",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "boolean_selector",
       "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/boolean_selector-2.1.1",
       "packageUri": "lib/",
@@ -63,7 +75,7 @@
     },
     {
       "name": "flutter_bluetooth_printer",
-      "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_bluetooth_printer-2.16.10",
+      "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/git/flutter_bluetooth_printer_plugin-f61f36e6a18b56266dfb2bf55c7064d076198f9f/packages/flutter_bluetooth_printer",
       "packageUri": "lib/",
       "languageVersion": "2.17"
     },
@@ -90,6 +102,12 @@
       "rootUri": "file:///C:/flutter/packages/flutter_test",
       "packageUri": "lib/",
       "languageVersion": "3.3"
+    },
+    {
+      "name": "flutter_to_pdf",
+      "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/flutter_to_pdf-0.2.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "image",
@@ -146,6 +164,18 @@
       "languageVersion": "3.0"
     },
     {
+      "name": "path_parsing",
+      "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/path_parsing-1.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "pdf",
+      "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/pdf-3.11.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
       "name": "petitparser",
       "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/petitparser-6.0.2",
       "packageUri": "lib/",
@@ -156,6 +186,12 @@
       "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
       "packageUri": "lib/",
       "languageVersion": "3.0"
+    },
+    {
+      "name": "qr",
+      "rootUri": "file:///C:/Users/ayefou/AppData/Local/Pub/Cache/hosted/pub.dev/qr-3.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "sky_engine",
@@ -230,7 +266,7 @@
       "languageVersion": "3.5"
     }
   ],
-  "generated": "2024-10-05T18:12:15.272877Z",
+  "generated": "2024-10-06T22:04:06.292652Z",
   "generator": "pub",
   "generatorVersion": "3.5.3",
   "flutterRoot": "file:///C:/flutter",

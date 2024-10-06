@@ -5,12 +5,18 @@ class ReceiptPage extends StatefulWidget {
   const ReceiptPage({Key? key}) : super(key: key);
 
   @override
-  State<ReceiptPage> createState() => _ReceiptPageState();
+  State<ReceiptPage> createState() => _ReceiptPageState(
+      paperSize: const PaperSize(400, 80, "80mm"),
+      address: "86:67:7A:00:4A:9F");
 }
 
 class _ReceiptPageState extends State<ReceiptPage> {
   ReceiptController? controller;
   String? address;
+  PaperSize paperSize;
+
+  _ReceiptPageState(
+      {this.controller, this.address, this.paperSize = PaperSize.mm58});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +27,7 @@ class _ReceiptPageState extends State<ReceiptPage> {
           IconButton(
             onPressed: () async {
               final selected =
-              await FlutterBluetoothPrinter.selectDevice(context);
+                  await FlutterBluetoothPrinter.selectDevice(context);
               if (selected != null) {
                 setState(() {
                   address = selected.address;
@@ -37,6 +43,7 @@ class _ReceiptPageState extends State<ReceiptPage> {
         children: [
           Expanded(
             child: Receipt(
+              paperSize: this.paperSize,
               backgroundColor: Colors.grey.shade200,
               builder: (context) {
                 return Column(
@@ -156,10 +163,11 @@ class _ReceiptPageState extends State<ReceiptPage> {
                       onPressed: () async {
                         final selectedAddress = address ??
                             (await FlutterBluetoothPrinter.selectDevice(
-                                context))
+                                    context))
                                 ?.address;
 
                         if (selectedAddress != null) {
+                          print("Printer address : $selectedAddress");
                           PrintingProgressDialog.print(
                             context,
                             device: selectedAddress,
@@ -183,6 +191,7 @@ class _ReceiptPageState extends State<ReceiptPage> {
 class PrintingProgressDialog extends StatefulWidget {
   final String device;
   final ReceiptController controller;
+
   const PrintingProgressDialog({
     Key? key,
     required this.device,
@@ -191,11 +200,12 @@ class PrintingProgressDialog extends StatefulWidget {
 
   @override
   State<PrintingProgressDialog> createState() => _PrintingProgressDialogState();
+
   static void print(
-      BuildContext context, {
-        required String device,
-        required ReceiptController controller,
-      }) async {
+    BuildContext context, {
+    required String device,
+    required ReceiptController controller,
+  }) async {
     showDialog(
       context: context,
       barrierDismissible: false,
@@ -209,6 +219,7 @@ class PrintingProgressDialog extends StatefulWidget {
 
 class _PrintingProgressDialogState extends State<PrintingProgressDialog> {
   double? progress;
+
   @override
   void initState() {
     super.initState();
